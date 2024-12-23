@@ -72,7 +72,8 @@ func (s *Slot) Check(ctx *base.EntryContext) *base.TokenResult {
 						base.WithBlockResource(res),
 						base.WithBlockType(base.BlockTypeHotSpotParamFlow),
 						base.WithRule(tc.BoundRule()),
-						base.WithBlockResource(node.ResourceName()))
+						base.WithBlockResource(node.ResourceName()),
+						base.WithSnapshotValue(arg))
 					return r
 
 				}
